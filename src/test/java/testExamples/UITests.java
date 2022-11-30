@@ -1,4 +1,4 @@
-package TestExamples;
+package testExamples;
 
 import com.codeborne.selenide.Condition;
 import org.junit.jupiter.api.Test;
