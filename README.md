@@ -36,19 +36,24 @@
 
 ### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; UI tests
 
-> - [x] *Page title should have header text*
+>-  *Main Page*
+>- [x] *Page title should have header text*
 >- [x] *Page console log should not have errors*
 >- [x] *Search field should work as expected*
->- [x] *Попытка входа в Систему с невалидным значением логина*
+>-  *Login Page*
+>- [x] *Login page title should have header text*
+>- [x] *Login page should not have console log errors*
+>- [x] *Login successful*
+>- [x] *Try to login to the System with an invalid data*
+>- [x] *Try to login to the System without specifying a password*
+>- [x] *Try to login to the System without any data*
+>- [x] *Go to page 'Forgot password'*
 
 
 ### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; API tests
 
 >- [x] *Check main page status code*
 >- [x] *Check content type*
->- [x] *Ошибка начала процедуры восстановления пароля пользователя по неизвестному логину*
->- [x] *Ошибка начала процедуры восстановления пароля пользователя с не подтвержденным адресом электронной почты*
->- [x] *Ошибка начала процедуры восстановления пароля пользователя с не указанным адресом электронной почты*
 
 
 ## :computer: Running tests from the terminal
@@ -96,10 +101,10 @@ allure serve build/allure-results
     BASE_URL 
 
 <p align="center">
-  <img src="images/Allure jobs history.png" alt="job" width="1000">
+  <img src="images/jenkins.png" alt="job" width="1000">
 </p>
 
 ## <img width="4%" title="Allure Report" src="images/allure-Report-logo.svg"> Allure report  
 <p align="center">
-  <img src="images/Allure Report.png" alt="job" width="1000"> 
+  <img src="images/allure report.png" alt="job" width="1000"> 
 </p>
