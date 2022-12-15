@@ -16,7 +16,7 @@
 <code><img width="5%" title="Gradle" src="images/gradle-logo.svg"></code> 
 <code><img width="5%" title="JUnit5" src="images/junit5-logo.svg"></code>
 <code><img width="5%" title="Allure Report" src="images/allure-Report-logo.svg"></code>
-<code><img width="5%" title="Github" src="images/git-logo.svg"></code>
+<code><img width="5%" title="Git" src="images/git-logo.svg"></code>
 <code><img width="5%" title="Jenkins" src="images/jenkins-logo.svg"></code>
 </p>
 
@@ -36,20 +36,16 @@
 
 ### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; UI tests
 
-> - [x] *Проверка заголовка страницы входа в Систему*
->- [x] *Лог консоли браузера на странице входа в Систему не содержит ошибок*
->- [x] *Успешный вход в Систему*
->- [x] *Попытка входа в Систему вне рабочего расписания доступа*
->- [x] *Попытка входа в Систему с неразрешенного IP-адреса*
->- [x] *Попытка входа в Систему под пользователем с истекшим сроком доступа*
->- [x] *Попытка входа в Систему под пользователем с отключенной учетной записью*
+> - [x] *Page title should have header text*
+>- [x] *Page console log should not have errors*
+>- [x] *Search field should work as expected*
 >- [x] *Попытка входа в Систему с невалидным значением логина*
 
 
 ### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; API tests
 
->- [x] *Успешное начало процедуры восстановления пароля пользователя*
->- [x] *Ошибка начала процедуры восстановления пароля пользователя без указания логина*
+>- [x] *Check main page status code*
+>- [x] *Check content type*
 >- [x] *Ошибка начала процедуры восстановления пароля пользователя по неизвестному логину*
 >- [x] *Ошибка начала процедуры восстановления пароля пользователя с не подтвержденным адресом электронной почты*
 >- [x] *Ошибка начала процедуры восстановления пароля пользователя с не указанным адресом электронной почты*
@@ -103,8 +99,7 @@ allure serve build/allure-results
   <img src="images/Allure jobs history.png" alt="job" width="1000">
 </p>
 
-
-## <img width="4%" title="Allure Report" src="images/allure-Report-logo.svg"> Отчет о результатах тестирования в [Allure Report](https://jenkins.autotests.cloud/job/C07-daramirra-diploma/8/allure/)
+## <img width="4%" title="Allure Report" src="images/allure-Report-logo.svg"> Allure report  
 <p align="center">
   <img src="images/Allure Report.png" alt="job" width="1000"> 
 </p>
