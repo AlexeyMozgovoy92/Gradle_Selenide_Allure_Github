@@ -24,7 +24,7 @@ public class UiLoginPageTests extends TestBase {
     @Owner("Alexey")
     @Layer("web")
     @Tags({@Tag("web"), @Tag("smoke")})
-    @DisplayName("Page Login title should have header text")
+    @DisplayName("Login page title should have header text")
     void checkTitleTest() {
         LoginPage loginPage = LoginPage.openPage();
         String expectedTitle = "Sign in to GitHub · GitHub";
@@ -38,7 +38,7 @@ public class UiLoginPageTests extends TestBase {
     @Owner("Alexey")
     @Layer("web")
     @Tags({@Tag("web"), @Tag("smoke")})
-    @DisplayName("Page Login should not have console log errors")
+    @DisplayName("Login page should not have console log errors")
     void consoleLogShouldNotHaveErrors() {
         LoginPage.openPage();
 
@@ -118,7 +118,7 @@ public class UiLoginPageTests extends TestBase {
     @Owner("Alexey")
     @Layer("web")
     @Tags({@Tag("web"), @Tag("smoke")})
-    @DisplayName("Go to the 'Forgot password' page")
+    @DisplayName("Go to page 'Forgot password'")
     void checkOpenForgotPasswordPage() {
         LoginPage loginPage = LoginPage.openPage();
         loginPage.clickForgotPasswordButton();
