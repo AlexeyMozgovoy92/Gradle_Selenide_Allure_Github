@@ -36,10 +36,7 @@
 
 ### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; UI tests
 
->-  *Main Page*
->- [x] *Page title should have header text*
->- [x] *Page console log should not have errors*
->- [x] *Search field should work as expected*
+
 >-  *Login Page*
 >- [x] *Login page title should have header text*
 >- [x] *Login page should not have console log errors*
@@ -48,7 +45,10 @@
 >- [x] *Try to login to the System without specifying a password*
 >- [x] *Try to login to the System without any data*
 >- [x] *Go to page 'Forgot password'*
-
+>-  *Main Page*
+>- [x] *Page title should have header text*
+>- [x] *Page console log should not have errors*
+>- [x] *Search field should work as expected*
 
 ### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; API tests
 
@@ -94,7 +94,7 @@ allure serve build/allure-results
 ### :pushpin: Build Options
 
     BROWSER (default chrome)
-    BROWSER_VERSION (default 99.0)
+    BROWSER_VERSION (default 100.0)
     BROWSER_SIZE (default 1920x1080)
     REMOTE_DRIVER_URL (url-address selenoid, default selenoid.autotests.cloud)
     TREADS (default 5)
@@ -105,6 +105,7 @@ allure serve build/allure-results
 </p>
 
 ## <img width="4%" title="Allure Report" src="images/allure-Report-logo.svg"> Allure report  
+
 <p align="center">
   <img src="images/allure report.png" alt="job" width="1000"> 
 </p>

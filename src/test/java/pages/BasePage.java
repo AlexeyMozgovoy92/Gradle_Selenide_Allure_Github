@@ -9,12 +9,12 @@ import static io.qameta.allure.Allure.step;
 
 
 public abstract class BasePage {
-    public String getTitle() {
+    public static String getTitle() {
         return title();
     }
 
     public void checkAlertContainsMessage(String value) {
-        step("Отображено сообщение об ошибке '" + value + "'", () -> {
+        step("Displayed error message '" + value + "'", () -> {
             $(byClassName("js-flash-alert")).shouldHave(text(value));
         });
     }

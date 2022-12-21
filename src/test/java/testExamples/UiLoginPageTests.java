@@ -4,12 +4,12 @@ import annotations.Layer;
 import com.github.javafaker.Faker;
 import io.qameta.allure.Owner;
 import io.qameta.allure.Step;
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Tag;
-import org.junit.jupiter.api.Tags;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
+import pages.AccountPage;
 import pages.LoginPage;
+import pages.PasswordResetPage;
 
+import static com.codeborne.selenide.Condition.text;
 import static helpers.DriverUtils.getConsoleLogs;
 import static io.qameta.allure.Allure.step;
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
@@ -48,23 +48,24 @@ public class UiLoginPageTests extends TestBase {
         });
     }
 
-//    @Test
-//    @Owner("Alexey")
-//    @Layer("web")
-//    @Tags({@Tag("web"), @Tag("smoke")})
-//    @DisplayName("Успешный вход в Систему")
-//    void loginSuccessful() {
-//        LoginPage loginPage = LoginPage.openPage();
-//        loginPage.setLoginValue(loginValue);
-//        loginPage.setPasswordValue(passwordValue);
-//        loginPage.clickSignInButton();
-//
-//        String expectedUserName = "Япользователь для автотестов";
-//        step("Профиль пользователя содержит '" + expectedUserName + "'", () -> {
-//            FrteOibAdminPage frteOibAdminPage = new FrteOibAdminPage();
-//            frteOibAdminPage.userProfileName().shouldHave(text(expectedUserName));
-//        });
-//    }
+    @Disabled
+    @Test                      //to do
+    @Owner("Alexey")
+    @Layer("web")
+    @Tags({@Tag("web"), @Tag("smoke")})
+    @DisplayName("Successful login ")
+    void loginSuccessful() {
+        LoginPage loginPage = LoginPage.openPage();
+        loginPage.setLoginValue(loginValue);
+        loginPage.setPasswordValue(passwordValue);
+        loginPage.clickSignInButton();
+
+        String expectedUserName = "TestAccount20";
+        step("Profile contains user '" + expectedUserName + "'", () -> {
+            AccountPage accountPage = new AccountPage();
+            accountPage.userProfileName().shouldHave(text(expectedUserName));
+        });
+    }
 
     @Test
     @Owner("Alexey")
@@ -122,6 +123,10 @@ public class UiLoginPageTests extends TestBase {
     void checkOpenForgotPasswordPage() {
         LoginPage loginPage = LoginPage.openPage();
         loginPage.clickForgotPasswordButton();
+        String expectedRecoveryPasswordTitle = "Forgot your password? · GitHub";
+        step("The title of the page contains '" + expectedRecoveryPasswordTitle + "'", () -> {
+            assertThat(PasswordResetPage.getTitle()).isEqualTo(expectedRecoveryPasswordTitle);
+        });
 
     }
 

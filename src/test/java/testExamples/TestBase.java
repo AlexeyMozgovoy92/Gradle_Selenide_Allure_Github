@@ -27,7 +27,7 @@ public class TestBase {
         Attach.screenshotAs("Last screenshot");
     }
 
-    String projectPassword = "qwerttyu";
-    String projectLogin = "admin";
+    String projectPassword = "Test123qa";
+    String projectLogin = "TestAccount20";
 
 }
