@@ -101,11 +101,15 @@ allure serve build/allure-results
     BASE_URL 
 
 <p align="center">
-  <img src="images/jenkins.png" alt="job" width="1000">
+  <img src="images/githubProject.png" alt="job" width="1000">
 </p>
 
-## <img width="4%" title="Allure Report" src="images/allure-Report-logo.svg"> Allure report  
+## <img src="images/allure-Report-logo.svg" title="Allure Report" width="4%"/> Allure report  
 
 <p align="center">
-  <img src="images/allure report.png" alt="job" width="1000"> 
+  <img src="images/allureReport.png" alt="job" width="1000"> 
+</p>
+
+<p align="center">
+  <img src="images/allureReport2.png" alt="job" width="1000"> 
 </p>
