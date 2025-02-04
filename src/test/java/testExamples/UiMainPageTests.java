@@ -4,6 +4,7 @@ import com.codeborne.selenide.Condition;
 import helpers.DriverUtils;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import org.openqa.selenium.By;
 
 import static com.codeborne.selenide.Selectors.withText;
 import static com.codeborne.selenide.Selenide.*;
@@ -31,9 +32,9 @@ public class UiMainPageTests extends TestBase{
     @DisplayName("Search field should work as expected")
     public void githubSearchTest() {
         open("https://github.com");
-        $(".header-search-input").click();
-        $(".header-search-input").sendKeys("AlexeyMozgovoy92");
-        $(".header-search-input").submit();
+        $(By.className("header-search-button")).click();
+        $(By.id("query-builder-test")).sendKeys("AlexeyMozgovoy92");
+        $(By.id("query-builder-test")).submit();
         $(withText("Alexey")).should(Condition.exist);
     }
 

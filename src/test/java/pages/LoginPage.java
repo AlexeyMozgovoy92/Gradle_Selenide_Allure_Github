@@ -1,7 +1,7 @@
 package pages;
 
 import com.codeborne.selenide.SelenideElement;
-import config.Project;
+
 import io.qameta.allure.Step;
 import org.openqa.selenium.Keys;
 
@@ -14,7 +14,7 @@ public class LoginPage extends BasePage {
 
     @Step("Open Sign in page")
     public static LoginPage openPage() {
-        open(Project.config.baseUrl() + "login/");
+        open("https://github.com/" + "login/");
         return new LoginPage();
     }
 
