@@ -9,10 +9,10 @@ version '1.0-SNAPSHOT'
 repositories {
     mavenCentral()
 }
-def allureVersion = "2.20.0",
-    selenideVersion = "6.10.1",
-    junitVersion = "5.9.0",
-    restAssuredVersion = "5.3.0"
+def allureVersion = "2.29.0",
+    selenideVersion = "6.19.1",
+    junitVersion = "5.11.4",
+    restAssuredVersion = "5.5.0"
 
 allure {
     report {
@@ -39,10 +39,10 @@ dependencies {
             "org.junit.jupiter:junit-jupiter-api:$junitVersion",
             "com.github.javafaker:javafaker:1.0.2",
             "org.aeonbits.owner:owner:1.0.12",
-            "org.assertj:assertj-core:3.19.0",
+            "org.assertj:assertj-core:3.26.3",
             "com.google.code.gson:gson:2.8.8")
     testRuntimeOnly(
-            "org.slf4j:slf4j-simple:1.7.29",
+            "org.slf4j:slf4j-simple:2.0.16",
             "org.junit.jupiter:junit-jupiter-engine:$junitVersion")
 }
 
@@ -54,8 +54,8 @@ tasks.withType(JavaCompile) {
 }
 
 tasks.withType(Test) {
-    systemProperties(System.getProperties())
-    systemProperty("url", System.getProperty("url", "selenoid.autotests.cloud/wd/hub/"))
+   // systemProperties(System.getProperties())
+   // systemProperty("url", System.getProperty("url", "selenoid.autotests.cloud/wd/hub/"))
     useJUnitPlatform()
 
     if (System.getProperty("threads") != null) {
